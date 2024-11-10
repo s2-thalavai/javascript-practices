@@ -1,5 +1,11 @@
 # javascript-practices
 
+Javascript, also known as JS, is a programming language used for the web development. 
+
+It is used to make HTML pages more interactive, and dynamic.
+
+
+
 ## run Javascript in Visual Studio Code
 
 
