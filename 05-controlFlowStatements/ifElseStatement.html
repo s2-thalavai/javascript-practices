@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If Else Statement in JavaScript</title>
+
+    <script>
+
+        function getCartoonCharacter() {
+
+            let cartoonObj = {
+                name: "",
+                creators: [],
+                publisher: ""
+            };
+
+            let favCartoonCharacter = prompt("What's your favorite CartoonCharacter?", "Batman");
+
+            if (favCartoonCharacter === "Batman") {
+                cartoonObj.creators = ["Bob Kane", "Bill Finger"];
+                cartoonObj.publisher = 'DC Comics';
+            } else if (favCartoonCharacter === "Spider-Man") {
+                cartoonObj.creators = ["Stan Lee", "Steve Ditko"];
+                cartoonObj.publisher = 'Marvel Comics';
+            } else if (favCartoonCharacter === "Iron Man") {
+                cartoonObj.creators = ["Stan Lee", "Larry Lieber", "Don Heck", "Jack Kirby"];
+                cartoonObj.publisher = 'Marvel Comics';
+            } else {
+                cartoonObj.creators = "I have never heard of that one..";
+                cartoonObj.publisher = 'Not Sure';
+            }
+
+            document.getElementById("cartoon-name").innerHTML = cartoonObj.name;
+            document.getElementById("cartoon-creators").innerHTML = cartoonObj.creators;
+            document.getElementById("cartoon-publisher").innerHTML = cartoonObj.publisher;
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <button onclick="getCartoonCharacter()"> Favourite Cartoon Character </button>
+
+    <p id="cartoon-name"> </p>
+    <p id="cartoon-creators"> </p>
+    <p id="cartoon-publisher"> </p>
+
+</body>
+
+</html>
