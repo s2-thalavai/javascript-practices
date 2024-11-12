@@ -1,0 +1,153 @@
+<!-- 
+
+getElementsByName() method:
+
+
+
+Summary
+
+    1.)  The getElementsByName() returns a live NodeList of elements with a specified name.
+
+    2.)  The NodeList is an array-like object, not an array object.
+
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript getElementsByName Demo</title>
+</head>
+
+<body>
+    <p>Please rate the service:</p>
+
+    <p>
+
+        <label for="very-poor">
+            <input type="radio" name="rate" value="Very poor" id="very-poor"> Very poor
+        </label>
+        <label for="poor">
+            <input type="radio" name="rate" value="Poor" id="poor"> Poor
+        </label>
+        <label for="ok">
+            <input type="radio" name="rate" value="OK" id="ok"> OK
+        </label>
+        <label for="good">
+            <input type="radio" name="rate" value="Good"> Good
+        </label>
+        <label for="very-good">
+            <input type="radio" name="rate" value="Very Good" id="very-good"> Very Good
+        </label>
+
+    </p>
+
+    <p>
+        <button id="btnRate">Submit</button>
+    </p>
+
+    <p id="output"></p>
+
+    <script>
+
+        let btn = document.getElementById('btnRate');
+        let output = document.getElementById('output');
+
+        btn.addEventListener('click', () => {
+            let rates = document.getElementsByName('rate');
+            rates.forEach((rate) => {
+                if (rate.checked) {
+                    output.innerText = `You selected: ${rate.value}`;
+                }
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- Questions 
+
+
+What does the JavaScript method getElementsByName do?
+
+Selects elements by their name attribute
+
+
+
+If no elements have the specified name attribute, what does getElementsByName return?
+
+An empty NodeList
+
+
+
+How can you access the first element returned by getElementsByName?
+
+document.getElementsByName('username')[0];
+
+
+
+Can getElementsByName be used to select elements with other attributes than 'name'?
+
+No
+
+
+
+Which is true about the NodeList returned by getElementsByName?
+
+It is live, updating automatically when the document changes
+
+
+
+What will document.getElementsByName('example')[1] return?
+
+The second element with name 'example'
+
+
+
+How would you loop through all elements returned by getElementsByName('test')?
+
+
+
+
+let elems = document.getElementsByName('test'); 
+
+for (let i = 0; i < elems.length; i++) { 
+
+/* code */ 
+
+}
+
+
+
+
+
+let elems = document.getElementsByName('test'); 
+
+elems.forEach(elem => { 
+
+    /* code */ 
+ 
+});
+
+
+
+
+let elems = document.getElementsByName('test'); 
+
+for (let elem of elems) { 
+
+    /* code */ 
+
+}
+
+
+
+
+-->
