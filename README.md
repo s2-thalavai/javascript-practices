@@ -13,7 +13,9 @@
   
   Check if NodeJS is installed already and the version
   
-  node -v 
-  npm -v
+    
+    node -v 
+  
+     npm -v
 
 ![image](https://github.com/user-attachments/assets/2194d06d-a09e-45d3-a3be-9d7205b02550)
